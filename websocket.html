@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var socket=new WebSocket('ws://localhost:9090');
+    socket.onopen= function () {
+        console.log("客户端已经连接");
+        socket.send('nihaofuwuqi')
+    }
+    socket.onmessage=function (event) {
+        console.log(event.data);
+    }
+</script>
+</body>
+</html>
